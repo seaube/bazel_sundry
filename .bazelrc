@@ -4,3 +4,6 @@ build --incompatible_enable_cc_toolchain_resolution
 build --incompatible_strict_action_env
 
 build:windows --platforms=//bazel/platforms:windows
+
+common:ci --announce_rc
+common:ci --disk_cache=~/.cache/bazel-disk-cache

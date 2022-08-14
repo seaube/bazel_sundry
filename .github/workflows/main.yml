@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - "**"
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/cache@v3
+        with:
+          path: |
+            /Users/runneradmin/AppData/Local/bazelisk
+            /Users/runneradmin/.cache/bazel-disk-cache
+          key: ${{runner.os}}-bazel-cache
+      - uses: actions/checkout@v2
+      - run: bazel build --config=ci //...
+  test-windows:
+    runs-on: windows-latest
+    needs: build-windows
+    steps:
+      - uses: actions/cache@v3
+        with:
+          path: |
+            /Users/runneradmin/AppData/Local/bazelisk
+            /Users/runneradmin/.cache/bazel-disk-cache
+          key: ${{runner.os}}-bazel-cache
+      - uses: actions/checkout@v2
+      - run: bazel test --config=ci //...
