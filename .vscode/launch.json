@@ -1,0 +1,18 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "cppdbg",
+			"cwd": "${workspaceFolder}",
+			"request": "launch",
+			"name": "run //test:runfiles",
+			"program": "${workspaceFolder}/bazel-bin/test/runfiles",
+			"windows": {
+				"type": "cppvsdbg",
+				"program": "${workspaceFolder}/bazel-bin/test/runfiles.exe",
+			},
+			"preLaunchTask": "build //test:runfiles"
+		}
+	],
+	"compounds": []
+}
