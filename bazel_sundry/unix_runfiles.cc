@@ -1,18 +1,19 @@
-#include <windows.h> // windows header always comes first
 #include "bazel_sundry/runfiles.hh"
 
 #include <string>
+#include <filesystem>
 
 using bazel_sundry::Runfiles;
+namespace fs = std::filesystem;
 
 std::unique_ptr<Runfiles> bazel_sundry::CreateDefaultRunfiles() {
-	char result[MAX_PATH];
-	size_t length = GetModuleFileName(NULL, result, MAX_PATH);
-	if(length == 0) {
+	std::error_code ec;
+	auto result = fs::canonical("/proc/self/exe", ec);
+	if(ec) {
 		return nullptr;
 	}
 
-	Runfiles* runfiles = Runfiles::Create(std::string(result));
+	Runfiles* runfiles = Runfiles::Create(result.string());
 	if(!runfiles) {
 		return nullptr;
 	}
