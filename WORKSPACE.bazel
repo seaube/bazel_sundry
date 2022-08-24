@@ -11,9 +11,9 @@ http_archive(
 
 http_archive(
     name = "hedron_compile_commands",
-    sha256 = "c192482fc1d76eeec2c92d1dced179122b6bd2895ca0e7239aa4866ece7e096c",
-    strip_prefix = "bazel-compile-commands-extractor-3b88df170394e5bf0a1995509443f8490ee14536",
-    url = "https://github.com/hedronvision/bazel-compile-commands-extractor/archive/3b88df170394e5bf0a1995509443f8490ee14536.tar.gz",
+    sha256 = "0ebe239779ff4e02a6650ac519be6dfdfb65fa09907ac4850d22805454542174",
+    strip_prefix = "bazel-compile-commands-extractor-39ab6ec822c3295f8378595d01ad150722b8d349",
+    url = "https://github.com/hedronvision/bazel-compile-commands-extractor/archive/39ab6ec822c3295f8378595d01ad150722b8d349.tar.gz",
 )
 
 load("@hedron_compile_commands//:workspace_setup.bzl", "hedron_compile_commands_setup")
