@@ -22,9 +22,9 @@ hedron_compile_commands_setup()
 
 http_archive(
     name = "com_grail_bazel_toolchain",
-    sha256 = "fbed0cf24304b57682ca63763528f5fa21c341c2eeff3dc53887eb73638059c4",
-    strip_prefix = "bazel-toolchain-069ee4e20ec605a6c76c1798658e17175b2eb35e",
-    url = "https://github.com/grailbio/bazel-toolchain/archive/069ee4e20ec605a6c76c1798658e17175b2eb35e.zip",
+    sha256 = "d2ba494a40f51064690bbb3e50ee6246803d6ad87dffba903760ff94bc87effc",
+    strip_prefix = "bazel-toolchain-795d76fd03e0b17c0961f0981a8512a00cba4fa2",
+    url = "https://github.com/grailbio/bazel-toolchain/archive/795d76fd03e0b17c0961f0981a8512a00cba4fa2.zip",
 )
 
 load("@com_grail_bazel_toolchain//toolchain:deps.bzl", "bazel_toolchain_dependencies")
