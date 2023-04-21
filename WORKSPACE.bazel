@@ -4,9 +4,9 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "com_google_googletest",
-    sha256 = "1f1bc77139c8ffa8ad202b2b46d6968c52781b843cda10eed63da4ea79423707",
-    strip_prefix = "googletest-a5308bb992c049b16b763f8910da70c208c5cede",
-    url = "https://github.com/google/googletest/archive/a5308bb992c049b16b763f8910da70c208c5cede.zip",
+    sha256 = "c1320a21bb3b707cd7f81a8f1c1fc79749163307215e60fa16bbb11258fc48ba",
+    strip_prefix = "googletest-baf182e006bcb82ef5e0b407e350a1d4c444b76a",
+    url = "https://github.com/google/googletest/archive/baf182e006bcb82ef5e0b407e350a1d4c444b76a.zip",
 )
 
 http_archive(
