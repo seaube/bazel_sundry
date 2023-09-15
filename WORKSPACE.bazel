@@ -1,13 +1,4 @@
-workspace(name = "bazel_sundry")
-
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
-
-http_archive(
-    name = "com_google_googletest",
-    sha256 = "6398970cac9b3ff8e8acef5bc1f6d624da633e0236a65825c95f98fbc8c5d6b5",
-    strip_prefix = "googletest-d1467f5813f4d363cfd11aba99c4e9fe47a85e99",
-    url = "https://github.com/google/googletest/archive/d1467f5813f4d363cfd11aba99c4e9fe47a85e99.zip",
-)
 
 http_archive(
     name = "hedron_compile_commands",
